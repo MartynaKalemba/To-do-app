@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="add_todo">Add ToDo</string>
+    <string name="new_task">New Task</string>
+    <string name="add_task">Add task</string>
+    <string name="task_description">Task Description</string>
+    <string name="title">Title:</string>
+    <string name="task_title">Task Title</string>
+    <string name="description">Description:</string>
+    <string name="creation_time">Creation time:</string>
+    <string name="due_to_time">Due to time:</string>
+    <string name="change_date">Change date</string>
+    <string name="attachment_image">Attachment image</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="study">study</string>
+    <string name="work">work</string>
+    <string name="personal">personal</string>
+    <string name="all">all</string>
+    <string name="select_category">Select Category</string>
+    <string name="status_d">Status: Done</string>
+    <string name="status_ud">Status: unDone</string>
+    <string name="category">Category: %s</string>
+
+    <string-array name="spinner_items">Categories:
+        <item>@string/personal</item>
+        <item>@string/work</item>
+        <item>@string/study</item>
+    </string-array>
+
+    <string-array name="show_categories">Categories:
+        <item>@string/all</item>
+        <item>@string/personal</item>
+        <item>@string/work</item>
+        <item>@string/study</item>
+    </string-array>
+
+    <string name="time1">at time</string>
+    <string name="time2">5 min before</string>
+    <string name="time3">10 min before</string>
+    <string name="hide_completed_tasks">Hide completed Tasks</string>
+    <string name="view_categories">View Categories:</string>
+    <string name="notifications">Notifications…</string>
+    <string name="notificationsSwitch">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="settings_icon">Settings Icon</string>
+    <string name="save_current_settings">Save Current Settings</string>
+
+    <string-array name="Notifications_timer">Categories:
+        <item>@string/time1</item>
+        <item>@string/time2</item>
+        <item>@string/time3</item>
+    </string-array>
+</resources>

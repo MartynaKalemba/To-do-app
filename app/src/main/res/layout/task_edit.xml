@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/title"
+    android:textSize="24sp"
+    />
+<EditText
+    android:id="@+id/etTaskTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:textSize="24sp"
+    android:autofillHints="Task Title"
+    android:hint="@string/task_title"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/description"
+    android:textSize="24sp"
+    />
+
+<EditText
+    android:id="@+id/etTaskDesc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:textSize="24sp"
+    android:autofillHints="Task Description"
+    android:hint="@string/task_description"/>
+<TextView
+    android:id="@+id/tvCreationTime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/creation_time"
+    android:textSize="24sp"
+    />
+<TextView
+    android:id="@+id/tvDueTime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/due_to_time"
+    android:textSize="24sp" />
+<Button
+    android:id="@+id/changeDateButt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/change_date"
+    android:layout_margin="16dp"
+    android:textSize="24sp"
+    android:onClick="popTimePicker"
+    />
+<TextView
+    android:id="@+id/tvStatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Status: "
+    android:textSize="24sp" />
+
+<TextView
+    android:id="@+id/tvCategory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Category: "
+    android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+    android:id="@+id/tvAttachments"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Attachments: "
+    android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonAttachments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addAttachment"
+        android:text="Select Attachment" />
+
+    <Button
+    android:id="@+id/saveButt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/save_changes"
+    android:textSize="24sp"
+    android:onClick="saveChanges"
+    />
+</LinearLayout>
