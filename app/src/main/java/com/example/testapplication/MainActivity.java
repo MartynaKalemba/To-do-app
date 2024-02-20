@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements TodoRecyclerViewA
 
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
-        //notificationIntent.putExtra(NotificationPublisher.TASK, item);//todo zamiast notyfikacji Item
+        //notificationIntent.putExtra(NotificationPublisher.TASK, item);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this,
                 0,
                 notificationIntent,
@@ -284,8 +284,12 @@ public class MainActivity extends AppCompatActivity implements TodoRecyclerViewA
 
         Date currentDate = new Date();//getCurrentDateIn24Format();
         Date deadlineDate = item.getDeadlineDate();
+        if(currentDate.after(deadlineDate))
+        {
+            return;
+        }
         long timeDifferenceInMillis = SystemClock.elapsedRealtime() +deadlineDate.getTime() - currentDate.getTime();
-        Toast.makeText(getApplicationContext(), "diff: " + timeDifferenceInMillis, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "diff: " + timeDifferenceInMillis, Toast.LENGTH_SHORT).show();
         System.out.println("currDate: " + currentDate);
         System.out.println("deadDate: " + deadlineDate);
 
@@ -299,7 +303,7 @@ public class MainActivity extends AppCompatActivity implements TodoRecyclerViewA
 
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Toast.makeText(getApplicationContext(), "Alarm: ", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Alarm: ", Toast.LENGTH_SHORT).show();
 
         assert alarmManager != null;
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, timeDifferenceInMillis, pendingIntent);
@@ -366,7 +370,7 @@ public class MainActivity extends AppCompatActivity implements TodoRecyclerViewA
             if (item.getDeadlineDate() == null) {
                 continue;
             }
-            scheduleNotification(item, dateShift);//todo
+            scheduleNotification(item, dateShift);
             System.out.println(":Sheduled: "+ item.getTask() +" :");
         }
     }

@@ -60,7 +60,7 @@ public class SettingsActivity extends AppCompatActivity {
             selectedTime = NotificationTime.NONE;
         }
 
-        spinnerNotifications.setEnabled(notificationSwitch.isChecked()); //todo to będzie trzeba zmienic
+        spinnerNotifications.setEnabled(notificationSwitch.isChecked());
 
 
         notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -204,7 +204,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void saveSettings(View view) {
         Intent intent = new Intent();
         intent.putExtra("resNotificationTime",selectedTime.ordinal());
-        intent.putExtra("resCategoriesToView",viewCategories.ordinal()); //todo problably wrong that I'm putting enums
+        intent.putExtra("resCategoriesToView",viewCategories.ordinal());
         intent.putExtra("resHideCompleted",hideCompleted);
         System.out.println("Notification Settings Save: " +selectedTime);
         setResult(10,intent);
